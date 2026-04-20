@@ -1,0 +1,148 @@
+/* Leads Page Specific Styles */
+
+.leads-container {
+    height: calc(100vh - var(--header-height) - 2rem);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Kanban Board Styling */
+.kanban-board {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    height: 100%;
+}
+
+.kanban-column {
+    min-width: 320px;
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.kanban-column:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-light);
+}
+
+.kanban-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.kanban-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Kanban Card Styling */
+.kanban-card {
+    background: var(--bg-card);
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    cursor: grab;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.kanban-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--card-border-color, transparent);
+    border-radius: 4px 0 0 4px;
+}
+
+.kanban-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.kanban-card:hover .action-buttons {
+    opacity: 1 !important;
+}
+
+.kanban-card:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.06);
+}
+
+/* Custom Scrollbar for Kanban */
+.kanban-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.kanban-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.kanban-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.kanban-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.kanban-board::-webkit-scrollbar {
+    height: 8px;
+}
+
+.kanban-board::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.kanban-board::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}

@@ -1,0 +1,8 @@
+ceo@kaizen.com | ceo | Active: True
+hr@kaizen.com | hr | Active: True
+rahul.d@kaizen.com | employee | Active: True
+ananya.p@kaizen.com | project_manager | Active: True
+rohan.g@kaizen.com | employee | Active: True
+sneha.r@kaizen.com | employee | Active: True
+karthik.m@kaizen.com | employee | Active: True
+neha.s@kaizen.com | employee | Active: True
