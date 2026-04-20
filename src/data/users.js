@@ -6,7 +6,7 @@ export const USERS = [
     {
         id: 1,
         email: 'ceo@kaizen.com',
-        password: 'ceo123',
+        password: 'password123',
         name: 'Rajesh Sharma',
         role: 'ceo',
         roleLabel: 'Chief Executive Officer',
@@ -19,7 +19,7 @@ export const USERS = [
     {
         id: 2,
         email: 'stakeholder1@kaizen.com',
-        password: 'stake123',
+        password: 'password123',
         name: 'Vikram Mehta',
         role: 'stakeholder',
         roleLabel: 'Board Member',
@@ -30,7 +30,7 @@ export const USERS = [
     {
         id: 3,
         email: 'stakeholder2@kaizen.com',
-        password: 'stake123',
+        password: 'password123',
         name: 'Priya Agarwal',
         role: 'stakeholder',
         roleLabel: 'Investor',
@@ -41,7 +41,7 @@ export const USERS = [
     {
         id: 4,
         email: 'stakeholder3@kaizen.com',
-        password: 'stake123',
+        password: 'password123',
         name: 'Suresh Iyer',
         role: 'stakeholder',
         roleLabel: 'Advisory Board',
@@ -54,7 +54,7 @@ export const USERS = [
     {
         id: 5,
         email: 'hr@kaizen.com',
-        password: 'hr123',
+        password: 'password123',
         name: 'Anjali Deshmukh',
         role: 'hr',
         roleLabel: 'HR Manager',
@@ -67,7 +67,7 @@ export const USERS = [
     {
         id: 6,
         email: 'pm1@kaizen.com',
-        password: 'pm123',
+        password: 'password123',
         name: 'Arjun Nair',
         role: 'project_manager',
         roleLabel: 'Senior Project Manager',
@@ -78,7 +78,7 @@ export const USERS = [
     {
         id: 7,
         email: 'pm2@kaizen.com',
-        password: 'pm123',
+        password: 'password123',
         name: 'Sneha Kulkarni',
         role: 'project_manager',
         roleLabel: 'Project Manager',
@@ -91,7 +91,7 @@ export const USERS = [
     {
         id: 8,
         email: 'amit@kaizen.com',
-        password: 'emp123',
+        password: 'password123',
         name: 'Amit Patel',
         role: 'employee',
         roleLabel: 'Senior Developer',
@@ -102,7 +102,7 @@ export const USERS = [
     {
         id: 9,
         email: 'pooja@kaizen.com',
-        password: 'emp123',
+        password: 'password123',
         name: 'Pooja Singh',
         role: 'employee',
         roleLabel: 'UI/UX Designer',
@@ -113,7 +113,7 @@ export const USERS = [
     {
         id: 10,
         email: 'rahul@kaizen.com',
-        password: 'emp123',
+        password: 'password123',
         name: 'Rahul Verma',
         role: 'employee',
         roleLabel: 'Software Developer',
@@ -124,7 +124,7 @@ export const USERS = [
     {
         id: 11,
         email: 'neha@kaizen.com',
-        password: 'emp123',
+        password: 'password123',
         name: 'Neha Gupta',
         role: 'employee',
         roleLabel: 'Accountant',
@@ -135,7 +135,7 @@ export const USERS = [
     {
         id: 12,
         email: 'kiran@kaizen.com',
-        password: 'emp123',
+        password: 'password123',
         name: 'Kiran Reddy',
         role: 'employee',
         roleLabel: 'Sales Executive',
