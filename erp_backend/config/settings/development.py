@@ -11,11 +11,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+import os
+
 # Database
+db_path = os.environ.get('SQLITE_DB_PATH')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': db_path if db_path else BASE_DIR / 'db.sqlite3',
     }
 }
 
