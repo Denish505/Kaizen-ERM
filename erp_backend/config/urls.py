@@ -4,7 +4,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+from django.views.generic import RedirectView
+
 urlpatterns = [
+    # Redirect root to admin login
+    path('', RedirectView.as_view(url='/admin/', permanent=False)),
+    
     path('admin/', admin.site.urls),
 
     # JWT Authentication

@@ -129,6 +129,9 @@ function App() {
             <Route path="/my/tasks" element={<MyTasks />} />
             <Route path="/my/performance" element={<MyPerformance />} />
           </Route>
+          
+          {/* Catch-all route for unknown URLs */}
+          <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </AnimatePresence>
     </AuthContext.Provider>
