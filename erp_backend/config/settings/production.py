@@ -10,6 +10,12 @@ DEBUG = False
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 
+# CORS settings for production
+if os.environ.get('CORS_ALLOWED_ORIGINS'):
+    CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS').split(',')
+elif os.environ.get('CORS_ALLOW_ALL_ORIGINS', 'False').lower() == 'true':
+    CORS_ALLOW_ALL_ORIGINS = True
+
 # Database - Use PostgreSQL in production
 DATABASES = {
     'default': {
