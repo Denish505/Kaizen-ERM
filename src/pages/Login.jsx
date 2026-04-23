@@ -31,32 +31,6 @@ export default function Login() {
         }
     }
 
-    const demoCredentials = [
-        { role: 'CEO', email: 'ceo@kaizen.com', password: 'password123', icon: Sparkles, gradient: 'linear-gradient(135deg, #a855f7, #6366f1)' },
-        { role: 'HR Manager', email: 'hr@kaizen.com', password: 'password123', icon: Users, gradient: 'linear-gradient(135deg, #10b981, #06b6d4)' },
-        { role: 'Project Manager', email: 'pm@kaizen.com', password: 'password123', icon: Zap, gradient: 'linear-gradient(135deg, #f59e0b, #f97316)' },
-        { role: 'Employee', email: 'employee@kaizen.com', password: 'password123', icon: Shield, gradient: 'linear-gradient(135deg, #3b82f6, #8b5cf6)' },
-    ]
-
-    const quickLogin = async (cred) => {
-        setEmail(cred.email)
-        setPassword(cred.password)
-        setError('')
-        setIsLoading(true)
-        try {
-            const { authService } = await import('../services/auth.service')
-            await authService.login(cred.email, cred.password)
-            const userResponse = await authService.getCurrentUser()
-            login(userResponse.data)
-            navigate('/dashboard')
-        } catch (err) {
-            console.error(err)
-            setError(err.response?.data?.detail || 'Login failed')
-        } finally {
-            setIsLoading(false)
-        }
-    }
-
     return (
         <div className="login-wrapper">
             {/* Animated Background */}
@@ -173,29 +147,7 @@ export default function Login() {
                         </button>
                     </form>
 
-                    <div className="login-divider">
-                        <span>Quick Access Demo</span>
-                    </div>
 
-                    <div className="login-demo-grid">
-                        {demoCredentials.map((cred, idx) => {
-                            const Icon = cred.icon
-                            return (
-                                <button
-                                    key={idx}
-                                    type="button"
-                                    className="login-demo-btn"
-                                    onClick={() => quickLogin(cred)}
-                                    disabled={isLoading}
-                                >
-                                    <div className="login-demo-icon" style={{ background: cred.gradient }}>
-                                        <Icon size={16} />
-                                    </div>
-                                    <span>{cred.role}</span>
-                                </button>
-                            )
-                        })}
-                    </div>
                 </div>
             </div>
         </div>
