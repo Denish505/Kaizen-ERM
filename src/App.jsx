@@ -80,8 +80,8 @@ function App() {
       <Toaster position="top-right" />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Login />} />
-          <Route path="/login" element={<Navigate to="/" replace />} />
+          <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Navigate to="/login" replace />} />
+          <Route path="/login" element={user ? <Navigate to="/dashboard" replace /> : <Login />} />
           <Route path="/forgot-password" element={user ? <Navigate to="/dashboard" /> : <ForgotPassword />} />
           <Route path="/reset-password/:uid/:token" element={user ? <Navigate to="/dashboard" /> : <ResetPassword />} />
 
