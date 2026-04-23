@@ -80,12 +80,13 @@ function App() {
       <Toaster position="top-right" />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
-          <Route path="/forgot-password" element={user ? <Navigate to="/" /> : <ForgotPassword />} />
-          <Route path="/reset-password/:uid/:token" element={user ? <Navigate to="/" /> : <ResetPassword />} />
+          <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Login />} />
+          <Route path="/login" element={<Navigate to="/" replace />} />
+          <Route path="/forgot-password" element={user ? <Navigate to="/dashboard" /> : <ForgotPassword />} />
+          <Route path="/reset-password/:uid/:token" element={user ? <Navigate to="/dashboard" /> : <ResetPassword />} />
 
-          <Route element={user ? <MainLayout /> : <Navigate to="/login" />}>
-            <Route path="/" element={<Dashboard />} />
+          <Route element={user ? <MainLayout /> : <Navigate to="/" />}>
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/settings" element={<Settings />} />
 
@@ -131,7 +132,7 @@ function App() {
           </Route>
           
           {/* Catch-all route for unknown URLs */}
-          <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>
     </AuthContext.Provider>

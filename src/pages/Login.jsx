@@ -22,7 +22,7 @@ export default function Login() {
             await authService.login(email, password)
             const userResponse = await authService.getCurrentUser()
             login(userResponse.data)
-            navigate('/')
+            navigate('/dashboard')
         } catch (err) {
             console.error(err)
             setError(err.response?.data?.detail || 'Invalid email or password')
@@ -48,7 +48,7 @@ export default function Login() {
             await authService.login(cred.email, cred.password)
             const userResponse = await authService.getCurrentUser()
             login(userResponse.data)
-            navigate('/')
+            navigate('/dashboard')
         } catch (err) {
             console.error(err)
             setError(err.response?.data?.detail || 'Login failed')
